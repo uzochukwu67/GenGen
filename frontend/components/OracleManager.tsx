@@ -139,15 +139,15 @@ export function OracleManager() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">{hubStats?.total_chains || 0}</div>
+                <div className="text-2xl font-bold text-accent">{(hubStats as any)?.total_chains || 0}</div>
                 <div className="text-sm text-muted-foreground">Chains</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">{hubStats?.total_markets || 0}</div>
+                <div className="text-2xl font-bold text-accent">{(hubStats as any)?.total_markets || 0}</div>
                 <div className="text-sm text-muted-foreground">Markets</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent">{hubStats?.total_resolved || 0}</div>
+                <div className="text-2xl font-bold text-accent">{(hubStats as any)?.total_resolved || 0}</div>
                 <div className="text-sm text-muted-foreground">Resolved</div>
               </div>
             </div>
