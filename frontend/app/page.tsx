@@ -3,6 +3,8 @@
 import { Navbar } from "@/components/Navbar";
 import { BetsTable } from "@/components/BetsTable";
 import { Leaderboard } from "@/components/Leaderboard";
+import { OracleManager } from "@/components/OracleManager";
+import { PredictionMarkets } from "@/components/PredictionMarkets";
 
 export default function HomePage() {
   return (
@@ -16,12 +18,12 @@ export default function HomePage() {
           {/* Hero Section */}
           <div className="text-center mb-8 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Football Prediction Betting
+              AI-Powered Prediction Markets
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI-powered football match predictions on GenLayer blockchain.
+              Decentralized prediction markets on GenLayer blockchain with AI-powered resolution.
               <br />
-              Create bets, make predictions, and compete for points.
+              Create markets, place bets, and let AI determine the outcomes.
             </p>
           </div>
 
@@ -38,26 +40,36 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Oracle Manager Section */}
+          <div className="mt-8 animate-slide-up" style={{ animationDelay: "150ms" }}>
+            <OracleManager />
+          </div>
+
+          {/* Prediction Markets Section */}
+          <div className="mt-8 animate-slide-up" style={{ animationDelay: "200ms" }}>
+            <PredictionMarkets />
+          </div>
+
           {/* Info Section */}
           <div className="mt-8 glass-card p-6 md:p-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
-            <h2 className="text-2xl font-bold mb-4">How it Works</h2>
+            <h2 className="text-2xl font-bold mb-4">How AI Prediction Markets Work</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
-                <div className="text-accent font-bold text-lg">1. Create a Bet</div>
+                <div className="text-accent font-bold text-lg">1. Register Chain & Create Market</div>
                 <p className="text-sm text-muted-foreground">
-                  Connect your wallet and create a football match prediction. Choose the teams, date, and your predicted winner.
+                  Register your blockchain and create prediction markets with clear resolution criteria and evidence sources.
                 </p>
               </div>
               <div className="space-y-2">
-                <div className="text-accent font-bold text-lg">2. Wait for Resolution</div>
+                <div className="text-accent font-bold text-lg">2. AI Resolution</div>
                 <p className="text-sm text-muted-foreground">
-                  After the match, the bet creator resolves the bet. GenLayer's AI verifies the actual match result.
+                  When markets reach their deadline, GenLayer's AI jury analyzes evidence and determines outcomes with confidence scores.
                 </p>
               </div>
               <div className="space-y-2">
-                <div className="text-accent font-bold text-lg">3. Earn Points</div>
+                <div className="text-accent font-bold text-lg">3. Automatic Payouts</div>
                 <p className="text-sm text-muted-foreground">
-                  Correct predictions earn you points. Climb the leaderboard and prove your football knowledge!
+                  Winners receive proportional payouts automatically. The relayer ensures verdicts are delivered to all chains.
                 </p>
               </div>
             </div>

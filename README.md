@@ -106,6 +106,14 @@ cp .env.example .env
 bun install && bun dev
 ```
 
+### 6. Run the Relayer (Node.js)
+```bash
+cd relayer
+cp .env.example .env
+# Configure your RPC URLs and private key
+npm install && npm start
+```
+
 ## 🎮 How It Works
 
 ### For Prediction Market Operators
@@ -144,6 +152,14 @@ bun install && bun dev
 - **Adapters**: LayerZero, Wormhole, Axelar, or custom relayers
 - **Callbacks**: HTTP endpoints or smart contract calls
 - **Live Data**: Fetches market sentiment during resolution
+
+### Relayer Implementation
+The Node.js relayer (`relayer/relayer-keeper.js`) provides:
+- **Monitoring**: Polls GenLayer Hub for pending markets
+- **Triggering**: Initiates AI resolution when deadlines are met
+- **Delivery**: Posts verdicts to EVM chains via OracleConsumer contracts
+- **Confirmation**: Marks delivery complete on GenLayer
+- **Fallback**: HTTP callback support for non-EVM chains
 
 ## 🧪 Testing
 

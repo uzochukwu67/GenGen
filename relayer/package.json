@@ -1,0 +1,20 @@
+{
+  "name": "genlayer-relayer",
+  "version": "1.0.0",
+  "description": "GenLayer Oracle Hub Relayer - Node.js implementation",
+  "main": "relayer-keeper.js",
+  "scripts": {
+    "start": "node relayer-keeper.js",
+    "register": "node register-chain.js",
+    "check": "node check-registration.js",
+    "dev": "node relayer-keeper.js"
+  },
+  "dependencies": {
+    "genlayer-js": "^0.18.3",
+    "ethers": "^6.13.4",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
